@@ -47,33 +47,20 @@ namespace DraconisCommands
 				MessageBox.Show(ex.Message, "Uh oh");
 			}
 
-			//Servers
-			servers.Add(" ");
-			servers.Add("o1");
-			servers.Add("o2");
-			servers.Add("o3");
-			servers.Add("o4");
-			servers.Add("o5");
-			servers.Add("o6");
-			servers.Add("o7");
-			servers.Add("o8");
-			servers.Add("o9");
-			servers.Add("i0");
-			servers.Add("i1");
-			servers.Add("i2");
-			servers.Add("i4");
-			servers.Add("1");
-			servers.Add("2");
-			servers.Add("3");
-			servers.Add("4");
-			servers.Add("5");
-			for(int i = 0; i < servers.Count; i++)
+			foreach(Servers s in Servers.getServers())
 			{
-				comboServers.Items.Add(servers[i]);
+				comboServers.Items.Add(s.serverID);
 			}
-
 		}
-		private void saveSteam64orUsername(object sender, EventArgs e)
+
+		private void alertMessage(string msg)
+		{
+			DateTime now = DateTime.Now;
+			String time = now.Hour.ToString() + ":" + now.Minute.ToString();
+			lblTopAlert.Text = time + " | " + msg;
+		}
+
+		private void saveSteam64orUsername_click(object sender, EventArgs e)
 		{
 
 			string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -86,6 +73,7 @@ namespace DraconisCommands
 				StreamWriter textOut = new StreamWriter(new FileStream(filePath, FileMode.Create, FileAccess.Write));
 				textOut.Write(txtSteam64orUsername.Text.ToString());
 				textOut.Close();
+				alertMessage("Username or Steam64 saved");
 			}
 			catch(Exception ex)
 			{
@@ -93,9 +81,18 @@ namespace DraconisCommands
 			}
 		}
 
-		private void tabPage3_Click(object sender, EventArgs e)
-		{
 
+		private void btnTicketsAdminMode_click(object sender, EventArgs e)
+		{
+			alertMessage(comboServers.SelectedItem.ToString() + " admin setrank \"" + Steam64ou + "\" 4 -> Copied");
+		}
+
+		private void updateTicketsServerDesc(object sender, EventArgs e)
+		{
+			List<Servers> theServers = new List<Servers>();
+			theServers = Servers.getServers();
+
+			lblTicketsServerDesc.Text = theServers[comboServers.SelectedIndex].desc;
 		}
 	}
 }
