@@ -1,0 +1,10 @@
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\DraconisCommands.exe.config
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\DraconisCommands.exe
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\DraconisCommands.pdb
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.csprojAssemblyReference.cache
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.Form1.resources
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.Properties.Resources.resources
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.csproj.GenerateResource.cache
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.csproj.CoreCompileInputs.cache
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.exe
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.pdb
