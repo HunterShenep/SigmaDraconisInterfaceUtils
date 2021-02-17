@@ -56,6 +56,8 @@ namespace DraconisCommands
 			{
 				comboServers.Items.Add(s.serverID);
 			}
+
+			
 		}
 
 
@@ -198,6 +200,50 @@ namespace DraconisCommands
 		{
 			copyToClipboard(getSelectedServer() + " admin setrank \"" + getPlayer() + "\" 1");
 		}
+
+
+		private void xelaButton_Click(object sender, EventArgs e)
+		{
+			Button pressed = (Button)sender;
+			if (pressed.Name.Equals(btnXelaScripter.Name))
+			{
+				copyToClipboard("/t scripter");
+			}
+			else if (pressed.Name.Equals(btnXela64.Name))
+			{
+				copyToClipboard("/t sid64");
+			}
+			else if (pressed.Name.Equals(btnXelaName.Name))
+			{
+				copyToClipboard("/t name");
+			}
+			else if (pressed.Name.Equals(btnXelaSupply.Name))
+			{
+				copyToClipboard("/t supply");
+			}
+			else if (pressed.Name.Equals(btnXelaLoadCrash.Name))
+			{
+				copyToClipboard("/t loadcrash");
+			}
+			else if (pressed.Name.Equals(btnXelaConnTrouble.Name))
+			{
+				copyToClipboard("/t conntrouble");
+			}
+			else if (pressed.Name.Equals(btnXelaFixship.Name))
+			{
+				copyToClipboard("/t fixship");
+			}
+			else if (pressed.Name.Equals(btnXelaSdnn.Name))
+			{
+				copyToClipboard("/t sdnn");
+			}
+			else if (pressed.Name.Equals(btnXelaClustering.Name))
+			{
+				copyToClipboard("/t clustering");
+			}
+		}
+
+
 	}
 }
 
