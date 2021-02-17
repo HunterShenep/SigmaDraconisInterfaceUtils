@@ -39,6 +39,7 @@ namespace DraconisCommands
 			this.txtSteam64orUsername = new System.Windows.Forms.TextBox();
 			this.Tickets = new System.Windows.Forms.TabPage();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.btnTicketsListAuthoredGrids = new System.Windows.Forms.Button();
 			this.btnTicketsClearAdminMode = new System.Windows.Forms.Button();
 			this.btnTicketsAdminModeAfter = new System.Windows.Forms.Button();
 			this.btnTicketsGiveScripterAccess = new System.Windows.Forms.Button();
@@ -53,28 +54,27 @@ namespace DraconisCommands
 			this.lblTicketsServerDesc = new System.Windows.Forms.Label();
 			this.comboServers = new System.Windows.Forms.ComboBox();
 			this.myTabControl = new System.Windows.Forms.TabControl();
-			this.btnTicketsListAuthoredGrids = new System.Windows.Forms.Button();
 			this.Xela = new System.Windows.Forms.TabPage();
-			this.panel5 = new System.Windows.Forms.Panel();
-			this.btnXelaScripter = new System.Windows.Forms.Button();
-			this.btnXela64 = new System.Windows.Forms.Button();
-			this.btnXelaName = new System.Windows.Forms.Button();
-			this.btnXelaSupply = new System.Windows.Forms.Button();
-			this.btnXelaLoadCrash = new System.Windows.Forms.Button();
 			this.panel6 = new System.Windows.Forms.Panel();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.btnXelaClustering = new System.Windows.Forms.Button();
+			this.btnXelaSdnn = new System.Windows.Forms.Button();
 			this.btnXelaFixship = new System.Windows.Forms.Button();
 			this.btnXelaConnTrouble = new System.Windows.Forms.Button();
-			this.btnXelaSdnn = new System.Windows.Forms.Button();
-			this.btnXelaClustering = new System.Windows.Forms.Button();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
+			this.panel5 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.btnXelaLoadCrash = new System.Windows.Forms.Button();
+			this.btnXelaSupply = new System.Windows.Forms.Button();
+			this.btnXelaName = new System.Windows.Forms.Button();
+			this.btnXela64 = new System.Windows.Forms.Button();
+			this.btnXelaScripter = new System.Windows.Forms.Button();
 			this.Settings.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.Tickets.SuspendLayout();
@@ -82,8 +82,8 @@ namespace DraconisCommands
 			this.panel2.SuspendLayout();
 			this.myTabControl.SuspendLayout();
 			this.Xela.SuspendLayout();
-			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
+			this.panel5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel3
@@ -181,6 +181,17 @@ namespace DraconisCommands
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(701, 159);
 			this.panel4.TabIndex = 6;
+			// 
+			// btnTicketsListAuthoredGrids
+			// 
+			this.btnTicketsListAuthoredGrids.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsListAuthoredGrids.Location = new System.Drawing.Point(526, 12);
+			this.btnTicketsListAuthoredGrids.Name = "btnTicketsListAuthoredGrids";
+			this.btnTicketsListAuthoredGrids.Size = new System.Drawing.Size(166, 36);
+			this.btnTicketsListAuthoredGrids.TabIndex = 7;
+			this.btnTicketsListAuthoredGrids.Text = "List Created Grids";
+			this.btnTicketsListAuthoredGrids.UseVisualStyleBackColor = true;
+			this.btnTicketsListAuthoredGrids.Click += new System.EventHandler(this.btnTicketsListAuthoredGrids_Click);
 			// 
 			// btnTicketsClearAdminMode
 			// 
@@ -334,17 +345,6 @@ namespace DraconisCommands
 			this.myTabControl.Size = new System.Drawing.Size(723, 254);
 			this.myTabControl.TabIndex = 0;
 			// 
-			// btnTicketsListAuthoredGrids
-			// 
-			this.btnTicketsListAuthoredGrids.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTicketsListAuthoredGrids.Location = new System.Drawing.Point(526, 12);
-			this.btnTicketsListAuthoredGrids.Name = "btnTicketsListAuthoredGrids";
-			this.btnTicketsListAuthoredGrids.Size = new System.Drawing.Size(166, 36);
-			this.btnTicketsListAuthoredGrids.TabIndex = 7;
-			this.btnTicketsListAuthoredGrids.Text = "List Created Grids";
-			this.btnTicketsListAuthoredGrids.UseVisualStyleBackColor = true;
-			this.btnTicketsListAuthoredGrids.Click += new System.EventHandler(this.btnTicketsListAuthoredGrids_Click);
-			// 
 			// Xela
 			// 
 			this.Xela.Controls.Add(this.panel6);
@@ -356,79 +356,6 @@ namespace DraconisCommands
 			this.Xela.TabIndex = 2;
 			this.Xela.Text = "Xela";
 			this.Xela.UseVisualStyleBackColor = true;
-			// 
-			// panel5
-			// 
-			this.panel5.BackColor = System.Drawing.Color.Beige;
-			this.panel5.Controls.Add(this.label7);
-			this.panel5.Controls.Add(this.label6);
-			this.panel5.Controls.Add(this.label5);
-			this.panel5.Controls.Add(this.label4);
-			this.panel5.Controls.Add(this.label3);
-			this.panel5.Controls.Add(this.btnXelaLoadCrash);
-			this.panel5.Controls.Add(this.btnXelaSupply);
-			this.panel5.Controls.Add(this.btnXelaName);
-			this.panel5.Controls.Add(this.btnXela64);
-			this.panel5.Controls.Add(this.btnXelaScripter);
-			this.panel5.Location = new System.Drawing.Point(6, 9);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(344, 208);
-			this.panel5.TabIndex = 2;
-			// 
-			// btnXelaScripter
-			// 
-			this.btnXelaScripter.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXelaScripter.Location = new System.Drawing.Point(10, 11);
-			this.btnXelaScripter.Name = "btnXelaScripter";
-			this.btnXelaScripter.Size = new System.Drawing.Size(122, 32);
-			this.btnXelaScripter.TabIndex = 0;
-			this.btnXelaScripter.Text = "/t scripter";
-			this.btnXelaScripter.UseVisualStyleBackColor = true;
-			this.btnXelaScripter.Click += new System.EventHandler(this.xelaButton_Click);
-			// 
-			// btnXela64
-			// 
-			this.btnXela64.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXela64.Location = new System.Drawing.Point(10, 49);
-			this.btnXela64.Name = "btnXela64";
-			this.btnXela64.Size = new System.Drawing.Size(122, 32);
-			this.btnXela64.TabIndex = 1;
-			this.btnXela64.Text = "/t sid64";
-			this.btnXela64.UseVisualStyleBackColor = true;
-			this.btnXela64.Click += new System.EventHandler(this.xelaButton_Click);
-			// 
-			// btnXelaName
-			// 
-			this.btnXelaName.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXelaName.Location = new System.Drawing.Point(10, 87);
-			this.btnXelaName.Name = "btnXelaName";
-			this.btnXelaName.Size = new System.Drawing.Size(122, 32);
-			this.btnXelaName.TabIndex = 2;
-			this.btnXelaName.Text = "/t name";
-			this.btnXelaName.UseVisualStyleBackColor = true;
-			this.btnXelaName.Click += new System.EventHandler(this.xelaButton_Click);
-			// 
-			// btnXelaSupply
-			// 
-			this.btnXelaSupply.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXelaSupply.Location = new System.Drawing.Point(10, 125);
-			this.btnXelaSupply.Name = "btnXelaSupply";
-			this.btnXelaSupply.Size = new System.Drawing.Size(122, 32);
-			this.btnXelaSupply.TabIndex = 3;
-			this.btnXelaSupply.Text = "/t supply";
-			this.btnXelaSupply.UseVisualStyleBackColor = true;
-			this.btnXelaSupply.Click += new System.EventHandler(this.xelaButton_Click);
-			// 
-			// btnXelaLoadCrash
-			// 
-			this.btnXelaLoadCrash.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXelaLoadCrash.Location = new System.Drawing.Point(10, 163);
-			this.btnXelaLoadCrash.Name = "btnXelaLoadCrash";
-			this.btnXelaLoadCrash.Size = new System.Drawing.Size(122, 32);
-			this.btnXelaLoadCrash.TabIndex = 4;
-			this.btnXelaLoadCrash.Text = "/t loadcrash";
-			this.btnXelaLoadCrash.UseVisualStyleBackColor = true;
-			this.btnXelaLoadCrash.Click += new System.EventHandler(this.xelaButton_Click);
 			// 
 			// panel6
 			// 
@@ -445,6 +372,64 @@ namespace DraconisCommands
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new System.Drawing.Size(353, 208);
 			this.panel6.TabIndex = 7;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(144, 134);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(150, 16);
+			this.label11.TabIndex = 13;
+			this.label11.Text = "Inform on grid clustering";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(144, 96);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(158, 16);
+			this.label10.TabIndex = 12;
+			this.label10.Text = "Agreement for sdnn access";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(144, 58);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(111, 16);
+			this.label9.TabIndex = 11;
+			this.label9.Text = "Inform on !fixship";
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(144, 20);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(162, 16);
+			this.label8.TabIndex = 10;
+			this.label8.Text = "Unable to connect to server";
+			// 
+			// btnXelaClustering
+			// 
+			this.btnXelaClustering.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXelaClustering.Location = new System.Drawing.Point(11, 125);
+			this.btnXelaClustering.Name = "btnXelaClustering";
+			this.btnXelaClustering.Size = new System.Drawing.Size(122, 32);
+			this.btnXelaClustering.TabIndex = 8;
+			this.btnXelaClustering.Text = "/t clustering";
+			this.btnXelaClustering.UseVisualStyleBackColor = true;
+			this.btnXelaClustering.Click += new System.EventHandler(this.xelaButton_Click);
+			// 
+			// btnXelaSdnn
+			// 
+			this.btnXelaSdnn.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXelaSdnn.Location = new System.Drawing.Point(11, 87);
+			this.btnXelaSdnn.Name = "btnXelaSdnn";
+			this.btnXelaSdnn.Size = new System.Drawing.Size(122, 32);
+			this.btnXelaSdnn.TabIndex = 7;
+			this.btnXelaSdnn.Text = "/t sdnn";
+			this.btnXelaSdnn.UseVisualStyleBackColor = true;
+			this.btnXelaSdnn.Click += new System.EventHandler(this.xelaButton_Click);
 			// 
 			// btnXelaFixship
 			// 
@@ -468,63 +453,23 @@ namespace DraconisCommands
 			this.btnXelaConnTrouble.UseVisualStyleBackColor = true;
 			this.btnXelaConnTrouble.Click += new System.EventHandler(this.xelaButton_Click);
 			// 
-			// btnXelaSdnn
+			// panel5
 			// 
-			this.btnXelaSdnn.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXelaSdnn.Location = new System.Drawing.Point(11, 87);
-			this.btnXelaSdnn.Name = "btnXelaSdnn";
-			this.btnXelaSdnn.Size = new System.Drawing.Size(122, 32);
-			this.btnXelaSdnn.TabIndex = 7;
-			this.btnXelaSdnn.Text = "/t sdnn";
-			this.btnXelaSdnn.UseVisualStyleBackColor = true;
-			this.btnXelaSdnn.Click += new System.EventHandler(this.xelaButton_Click);
-			// 
-			// btnXelaClustering
-			// 
-			this.btnXelaClustering.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXelaClustering.Location = new System.Drawing.Point(11, 125);
-			this.btnXelaClustering.Name = "btnXelaClustering";
-			this.btnXelaClustering.Size = new System.Drawing.Size(122, 32);
-			this.btnXelaClustering.TabIndex = 8;
-			this.btnXelaClustering.Text = "/t clustering";
-			this.btnXelaClustering.UseVisualStyleBackColor = true;
-			this.btnXelaClustering.Click += new System.EventHandler(this.xelaButton_Click);
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(138, 20);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(182, 16);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "Agreement for scripting access";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(138, 58);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(104, 16);
-			this.label4.TabIndex = 6;
-			this.label4.Text = "Request steam64";
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(138, 96);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(160, 16);
-			this.label5.TabIndex = 7;
-			this.label5.Text = "Request IGN match discord";
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(138, 134);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(181, 16);
-			this.label6.TabIndex = 8;
-			this.label6.Text = "Do this after giving supply pod";
+			this.panel5.BackColor = System.Drawing.Color.Beige;
+			this.panel5.Controls.Add(this.label7);
+			this.panel5.Controls.Add(this.label6);
+			this.panel5.Controls.Add(this.label5);
+			this.panel5.Controls.Add(this.label4);
+			this.panel5.Controls.Add(this.label3);
+			this.panel5.Controls.Add(this.btnXelaLoadCrash);
+			this.panel5.Controls.Add(this.btnXelaSupply);
+			this.panel5.Controls.Add(this.btnXelaName);
+			this.panel5.Controls.Add(this.btnXela64);
+			this.panel5.Controls.Add(this.btnXelaScripter);
+			this.panel5.Location = new System.Drawing.Point(6, 9);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(344, 208);
+			this.panel5.TabIndex = 2;
 			// 
 			// label7
 			// 
@@ -535,41 +480,96 @@ namespace DraconisCommands
 			this.label7.TabIndex = 9;
 			this.label7.Text = "Crash loading troubleshooting tips";
 			// 
-			// label8
+			// label6
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(144, 20);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(162, 16);
-			this.label8.TabIndex = 10;
-			this.label8.Text = "Unable to connect to server";
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(138, 134);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(181, 16);
+			this.label6.TabIndex = 8;
+			this.label6.Text = "Do this after giving supply pod";
 			// 
-			// label9
+			// label5
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(144, 58);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(111, 16);
-			this.label9.TabIndex = 11;
-			this.label9.Text = "Inform on !fixship";
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(138, 96);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(160, 16);
+			this.label5.TabIndex = 7;
+			this.label5.Text = "Request IGN match discord";
 			// 
-			// label10
+			// label4
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(144, 96);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(158, 16);
-			this.label10.TabIndex = 12;
-			this.label10.Text = "Agreement for sdnn access";
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(138, 58);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(104, 16);
+			this.label4.TabIndex = 6;
+			this.label4.Text = "Request steam64";
 			// 
-			// label11
+			// label3
 			// 
-			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(144, 134);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(150, 16);
-			this.label11.TabIndex = 13;
-			this.label11.Text = "Inform on grid clustering";
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(138, 20);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(182, 16);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Agreement for scripting access";
+			// 
+			// btnXelaLoadCrash
+			// 
+			this.btnXelaLoadCrash.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXelaLoadCrash.Location = new System.Drawing.Point(10, 163);
+			this.btnXelaLoadCrash.Name = "btnXelaLoadCrash";
+			this.btnXelaLoadCrash.Size = new System.Drawing.Size(122, 32);
+			this.btnXelaLoadCrash.TabIndex = 4;
+			this.btnXelaLoadCrash.Text = "/t loadcrash";
+			this.btnXelaLoadCrash.UseVisualStyleBackColor = true;
+			this.btnXelaLoadCrash.Click += new System.EventHandler(this.xelaButton_Click);
+			// 
+			// btnXelaSupply
+			// 
+			this.btnXelaSupply.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXelaSupply.Location = new System.Drawing.Point(10, 125);
+			this.btnXelaSupply.Name = "btnXelaSupply";
+			this.btnXelaSupply.Size = new System.Drawing.Size(122, 32);
+			this.btnXelaSupply.TabIndex = 3;
+			this.btnXelaSupply.Text = "/t supply";
+			this.btnXelaSupply.UseVisualStyleBackColor = true;
+			this.btnXelaSupply.Click += new System.EventHandler(this.xelaButton_Click);
+			// 
+			// btnXelaName
+			// 
+			this.btnXelaName.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXelaName.Location = new System.Drawing.Point(10, 87);
+			this.btnXelaName.Name = "btnXelaName";
+			this.btnXelaName.Size = new System.Drawing.Size(122, 32);
+			this.btnXelaName.TabIndex = 2;
+			this.btnXelaName.Text = "/t name";
+			this.btnXelaName.UseVisualStyleBackColor = true;
+			this.btnXelaName.Click += new System.EventHandler(this.xelaButton_Click);
+			// 
+			// btnXela64
+			// 
+			this.btnXela64.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXela64.Location = new System.Drawing.Point(10, 49);
+			this.btnXela64.Name = "btnXela64";
+			this.btnXela64.Size = new System.Drawing.Size(122, 32);
+			this.btnXela64.TabIndex = 1;
+			this.btnXela64.Text = "/t sid64";
+			this.btnXela64.UseVisualStyleBackColor = true;
+			this.btnXela64.Click += new System.EventHandler(this.xelaButton_Click);
+			// 
+			// btnXelaScripter
+			// 
+			this.btnXelaScripter.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXelaScripter.Location = new System.Drawing.Point(10, 11);
+			this.btnXelaScripter.Name = "btnXelaScripter";
+			this.btnXelaScripter.Size = new System.Drawing.Size(122, 32);
+			this.btnXelaScripter.TabIndex = 0;
+			this.btnXelaScripter.Text = "/t scripter";
+			this.btnXelaScripter.UseVisualStyleBackColor = true;
+			this.btnXelaScripter.Click += new System.EventHandler(this.xelaButton_Click);
 			// 
 			// Form1
 			// 
@@ -580,7 +580,7 @@ namespace DraconisCommands
 			this.Controls.Add(this.myTabControl);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
-			this.Text = "Sigma Draconis | Command Helper (v1.0.0)";
+			this.Text = "Sigma Draconis | Command Helper (v1.1.0)";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.Settings.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
@@ -591,10 +591,10 @@ namespace DraconisCommands
 			this.panel2.PerformLayout();
 			this.myTabControl.ResumeLayout(false);
 			this.Xela.ResumeLayout(false);
-			this.panel5.ResumeLayout(false);
-			this.panel5.PerformLayout();
 			this.panel6.ResumeLayout(false);
 			this.panel6.PerformLayout();
+			this.panel5.ResumeLayout(false);
+			this.panel5.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
