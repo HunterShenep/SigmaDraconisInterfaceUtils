@@ -41,6 +41,11 @@ namespace DraconisCommands
 					
 				}
 				textIn.Close();
+
+				if(Steam64ou == null)
+				{
+					Steam64ou = "";
+				}
 			}
 			catch (Exception ex)
 			{
@@ -53,11 +58,62 @@ namespace DraconisCommands
 			}
 		}
 
-		private void alertMessage(string msg)
+
+		//######################### NONE Windows Button/Item related methods #########################
+		//######################### NONE Windows Button/Item related methods #########################
+		//######################### NONE Windows Button/Item related methods #########################
+
+		//Self explanatory COPY TO CLIPBOARD
+		private void copyToClipboard(string text)
 		{
-			DateTime now = DateTime.Now;
-			String time = now.Hour.ToString() + ":" + now.Minute.ToString();
-			lblTopAlert.Text = time + " | " + msg;
+			Clipboard.Clear();
+			Clipboard.SetText(text);
+			//DateTime now = DateTime.Now;
+			//String time = now.Hour.ToString() + ":" + now.Minute.ToString();
+			lblTopAlert.Text = "COPIED --> " + text;
+		}
+
+		private void alertMessage(string text)
+		{
+			lblTopAlert.Text = text;
+		}
+
+		private string getPlayer()
+		{
+			try
+			{
+				if (txtTicketsPlayer.Text == null)
+				{
+					return "\"\"";
+				}
+				else
+				{
+					return txtTicketsPlayer.Text.ToString();
+				}
+			}
+			catch (NullReferenceException ex)
+			{
+				return "";
+			}
+		}
+		private string getSelectedServer()
+		{
+
+			try
+			{
+				if (comboServers.SelectedItem == null)
+				{
+					return "?";
+				}
+				else
+				{
+					return comboServers.SelectedItem.ToString();
+				}
+			}
+			catch (NullReferenceException ex)
+			{
+				return "";
+			}
 		}
 
 		private void saveSteam64orUsername_click(object sender, EventArgs e)
@@ -82,17 +138,65 @@ namespace DraconisCommands
 		}
 
 
-		private void btnTicketsAdminMode_click(object sender, EventArgs e)
-		{
-			alertMessage(comboServers.SelectedItem.ToString() + " admin setrank \"" + Steam64ou + "\" 4 -> Copied");
-		}
-
+		//Update the message to the right of server selected
 		private void updateTicketsServerDesc(object sender, EventArgs e)
 		{
 			List<Servers> theServers = new List<Servers>();
 			theServers = Servers.getServers();
 
 			lblTicketsServerDesc.Text = theServers[comboServers.SelectedIndex].desc;
+		}
+
+
+
+		//######################### BUTTON METHODS #########################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		//######################### BUTTON METHODS #########################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		//######################### BUTTON METHODS #########################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+		//Set yourself to admin mode BUTTON 
+		private void btnTicketsAdminMode_click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " admin setrank \"" + Steam64ou + "\" 4");
+		}
+
+		//Set yourself back to scriptor
+		private void btnTicketsClearAdminMode_Click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " admin setrank \"" + Steam64ou + "\" 1");
+			
+		}
+
+
+
+
+		private void btnTicketsAdminModeAfter_Click(object sender, EventArgs e)
+		{
+			copyToClipboard("fk" + " admin clearadminsettings \"" + Steam64ou + "\"");
+		}
+
+		private void btnTicketsListGridBackups_Click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " gridbackuplist \"" + getPlayer() + "\"");
+		}
+
+		private void btnTicketsListHangarContents_Click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " hmlist \"" + getPlayer() + "\"");
+		}
+
+		private void btnTicketsListOwnedGrids_Click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " listgridsowner \"" + getPlayer() + "\"");
+		}
+
+		private void btnTicketsListAuthoredGrids_Click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " listgridsauthor \"" + getPlayer() + "\"");
+		}
+
+		private void btnTicketsGiveScripterAccess_Click(object sender, EventArgs e)
+		{
+			copyToClipboard(getSelectedServer() + " admin setrank \"" + getPlayer() + "\" 1");
 		}
 	}
 }

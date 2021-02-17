@@ -8,3 +8,7 @@ C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\Draconi
 C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.csproj.CoreCompileInputs.cache
 C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.exe
 C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.pdb
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\DraconisCommands.exe.manifest
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\DraconisCommands.application
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.exe.manifest
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.application

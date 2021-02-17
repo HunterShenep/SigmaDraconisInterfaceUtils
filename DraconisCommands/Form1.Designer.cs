@@ -40,20 +40,21 @@ namespace DraconisCommands
 			this.txtSteam64orUsername = new System.Windows.Forms.TextBox();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnTicketsClearAdminMode = new System.Windows.Forms.Button();
+			this.btnTicketsAdminModeAfter = new System.Windows.Forms.Button();
+			this.btnTicketsGiveScripterAccess = new System.Windows.Forms.Button();
+			this.btnTicketsListOwnedGrids = new System.Windows.Forms.Button();
+			this.btnTicketsListHangarContents = new System.Windows.Forms.Button();
+			this.btnTicketsListGridBackups = new System.Windows.Forms.Button();
 			this.btnTicketsAdminMode = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtTicketsPlayer = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lblTicketsServerDesc = new System.Windows.Forms.Label();
 			this.comboServers = new System.Windows.Forms.ComboBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.btnTicketsListAuthoredGrids = new System.Windows.Forms.Button();
 			this.tabPage2.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -74,7 +75,7 @@ namespace DraconisCommands
 			// 
 			this.lblTopAlert.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.lblTopAlert.BackColor = System.Drawing.SystemColors.ButtonShadow;
-			this.lblTopAlert.Location = new System.Drawing.Point(-21, 0);
+			this.lblTopAlert.Location = new System.Drawing.Point(-17, 0);
 			this.lblTopAlert.Name = "lblTopAlert";
 			this.lblTopAlert.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.lblTopAlert.Size = new System.Drawing.Size(794, 23);
@@ -83,18 +84,18 @@ namespace DraconisCommands
 			// 
 			// tabPage3
 			// 
-			this.tabPage3.Location = new System.Drawing.Point(4, 22);
+			this.tabPage3.Location = new System.Drawing.Point(4, 25);
 			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Size = new System.Drawing.Size(767, 281);
+			this.tabPage3.Size = new System.Drawing.Size(767, 278);
 			this.tabPage3.TabIndex = 2;
 			// 
 			// tabPage2
 			// 
 			this.tabPage2.Controls.Add(this.panel1);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Location = new System.Drawing.Point(4, 25);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(767, 281);
+			this.tabPage2.Size = new System.Drawing.Size(767, 278);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Settings";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -107,7 +108,7 @@ namespace DraconisCommands
 			this.panel1.Controls.Add(this.txtSteam64orUsername);
 			this.panel1.Location = new System.Drawing.Point(8, 8);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(326, 381);
+			this.panel1.Size = new System.Drawing.Size(368, 105);
 			this.panel1.TabIndex = 0;
 			// 
 			// btnSaveSteam64orUsername
@@ -125,9 +126,9 @@ namespace DraconisCommands
 			this.lblSteam64orUsername.AutoSize = true;
 			this.lblSteam64orUsername.Location = new System.Drawing.Point(12, 21);
 			this.lblSteam64orUsername.Name = "lblSteam64orUsername";
-			this.lblSteam64orUsername.Size = new System.Drawing.Size(131, 16);
+			this.lblSteam64orUsername.Size = new System.Drawing.Size(159, 16);
 			this.lblSteam64orUsername.TabIndex = 1;
-			this.lblSteam64orUsername.Text = "Steam64 or Username";
+			this.lblSteam64orUsername.Text = "Your Steam64 or Username";
 			// 
 			// txtSteam64orUsername
 			// 
@@ -144,7 +145,7 @@ namespace DraconisCommands
 			this.tabPage1.Location = new System.Drawing.Point(4, 25);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(767, 278);
+			this.tabPage1.Size = new System.Drawing.Size(767, 225);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Tickets";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -152,84 +153,91 @@ namespace DraconisCommands
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.White;
-			this.panel4.Controls.Add(this.button6);
-			this.panel4.Controls.Add(this.button5);
-			this.panel4.Controls.Add(this.button4);
-			this.panel4.Controls.Add(this.button3);
-			this.panel4.Controls.Add(this.button2);
-			this.panel4.Controls.Add(this.button1);
+			this.panel4.Controls.Add(this.btnTicketsListAuthoredGrids);
+			this.panel4.Controls.Add(this.btnTicketsClearAdminMode);
+			this.panel4.Controls.Add(this.btnTicketsAdminModeAfter);
+			this.panel4.Controls.Add(this.btnTicketsGiveScripterAccess);
+			this.panel4.Controls.Add(this.btnTicketsListOwnedGrids);
+			this.panel4.Controls.Add(this.btnTicketsListHangarContents);
+			this.panel4.Controls.Add(this.btnTicketsListGridBackups);
 			this.panel4.Controls.Add(this.btnTicketsAdminMode);
 			this.panel4.Location = new System.Drawing.Point(6, 60);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(755, 215);
+			this.panel4.Size = new System.Drawing.Size(755, 159);
 			this.panel4.TabIndex = 6;
 			// 
-			// button6
+			// btnTicketsClearAdminMode
 			// 
-			this.button6.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.Location = new System.Drawing.Point(446, 175);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(150, 37);
-			this.button6.TabIndex = 6;
-			this.button6.Text = "Clear Admin";
-			this.button6.UseVisualStyleBackColor = true;
+			this.btnTicketsClearAdminMode.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsClearAdminMode.Location = new System.Drawing.Point(446, 113);
+			this.btnTicketsClearAdminMode.Name = "btnTicketsClearAdminMode";
+			this.btnTicketsClearAdminMode.Size = new System.Drawing.Size(150, 37);
+			this.btnTicketsClearAdminMode.TabIndex = 6;
+			this.btnTicketsClearAdminMode.Text = "Clear Admin";
+			this.btnTicketsClearAdminMode.UseVisualStyleBackColor = true;
+			this.btnTicketsClearAdminMode.Click += new System.EventHandler(this.btnTicketsClearAdminMode_Click);
 			// 
-			// button5
+			// btnTicketsAdminModeAfter
 			// 
-			this.button5.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(602, 175);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(150, 37);
-			this.button5.TabIndex = 5;
-			this.button5.Text = "Run Me After";
-			this.button5.UseVisualStyleBackColor = true;
+			this.btnTicketsAdminModeAfter.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsAdminModeAfter.Location = new System.Drawing.Point(602, 113);
+			this.btnTicketsAdminModeAfter.Name = "btnTicketsAdminModeAfter";
+			this.btnTicketsAdminModeAfter.Size = new System.Drawing.Size(150, 37);
+			this.btnTicketsAdminModeAfter.TabIndex = 5;
+			this.btnTicketsAdminModeAfter.Text = "<- Run Me After";
+			this.btnTicketsAdminModeAfter.UseVisualStyleBackColor = true;
+			this.btnTicketsAdminModeAfter.Click += new System.EventHandler(this.btnTicketsAdminModeAfter_Click);
 			// 
-			// button4
+			// btnTicketsGiveScripterAccess
 			// 
-			this.button4.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.Location = new System.Drawing.Point(10, 54);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(166, 36);
-			this.button4.TabIndex = 4;
-			this.button4.Text = "Scripter Access";
-			this.button4.UseVisualStyleBackColor = true;
+			this.btnTicketsGiveScripterAccess.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsGiveScripterAccess.Location = new System.Drawing.Point(10, 54);
+			this.btnTicketsGiveScripterAccess.Name = "btnTicketsGiveScripterAccess";
+			this.btnTicketsGiveScripterAccess.Size = new System.Drawing.Size(166, 36);
+			this.btnTicketsGiveScripterAccess.TabIndex = 4;
+			this.btnTicketsGiveScripterAccess.Text = "Scripter Access";
+			this.btnTicketsGiveScripterAccess.UseVisualStyleBackColor = true;
+			this.btnTicketsGiveScripterAccess.Click += new System.EventHandler(this.btnTicketsGiveScripterAccess_Click);
 			// 
-			// button3
+			// btnTicketsListOwnedGrids
 			// 
-			this.button3.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(354, 12);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(166, 36);
-			this.button3.TabIndex = 3;
-			this.button3.Text = "List Owned Grids";
-			this.button3.UseVisualStyleBackColor = true;
+			this.btnTicketsListOwnedGrids.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsListOwnedGrids.Location = new System.Drawing.Point(354, 12);
+			this.btnTicketsListOwnedGrids.Name = "btnTicketsListOwnedGrids";
+			this.btnTicketsListOwnedGrids.Size = new System.Drawing.Size(166, 36);
+			this.btnTicketsListOwnedGrids.TabIndex = 3;
+			this.btnTicketsListOwnedGrids.Text = "List Owned Grids";
+			this.btnTicketsListOwnedGrids.UseVisualStyleBackColor = true;
+			this.btnTicketsListOwnedGrids.Click += new System.EventHandler(this.btnTicketsListOwnedGrids_Click);
 			// 
-			// button2
+			// btnTicketsListHangarContents
 			// 
-			this.button2.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(182, 12);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(166, 36);
-			this.button2.TabIndex = 2;
-			this.button2.Text = "List Hangar";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnTicketsListHangarContents.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsListHangarContents.Location = new System.Drawing.Point(182, 12);
+			this.btnTicketsListHangarContents.Name = "btnTicketsListHangarContents";
+			this.btnTicketsListHangarContents.Size = new System.Drawing.Size(166, 36);
+			this.btnTicketsListHangarContents.TabIndex = 2;
+			this.btnTicketsListHangarContents.Text = "List Hangar";
+			this.btnTicketsListHangarContents.UseVisualStyleBackColor = true;
+			this.btnTicketsListHangarContents.Click += new System.EventHandler(this.btnTicketsListHangarContents_Click);
 			// 
-			// button1
+			// btnTicketsListGridBackups
 			// 
-			this.button1.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(10, 12);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(166, 36);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "List Grid Backups";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnTicketsListGridBackups.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsListGridBackups.Location = new System.Drawing.Point(10, 12);
+			this.btnTicketsListGridBackups.Name = "btnTicketsListGridBackups";
+			this.btnTicketsListGridBackups.Size = new System.Drawing.Size(166, 36);
+			this.btnTicketsListGridBackups.TabIndex = 1;
+			this.btnTicketsListGridBackups.Text = "List Grid Backups";
+			this.btnTicketsListGridBackups.UseVisualStyleBackColor = true;
+			this.btnTicketsListGridBackups.Click += new System.EventHandler(this.btnTicketsListGridBackups_Click);
 			// 
 			// btnTicketsAdminMode
 			// 
 			this.btnTicketsAdminMode.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTicketsAdminMode.Location = new System.Drawing.Point(3, 175);
+			this.btnTicketsAdminMode.Location = new System.Drawing.Point(10, 113);
 			this.btnTicketsAdminMode.Name = "btnTicketsAdminMode";
-			this.btnTicketsAdminMode.Size = new System.Drawing.Size(150, 37);
+			this.btnTicketsAdminMode.Size = new System.Drawing.Size(166, 37);
 			this.btnTicketsAdminMode.TabIndex = 0;
 			this.btnTicketsAdminMode.Text = "Admin Mode";
 			this.btnTicketsAdminMode.UseVisualStyleBackColor = true;
@@ -238,7 +246,7 @@ namespace DraconisCommands
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.Beige;
-			this.panel2.Controls.Add(this.textBox1);
+			this.panel2.Controls.Add(this.txtTicketsPlayer);
 			this.panel2.Controls.Add(this.label2);
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Controls.Add(this.lblTicketsServerDesc);
@@ -248,13 +256,13 @@ namespace DraconisCommands
 			this.panel2.Size = new System.Drawing.Size(755, 45);
 			this.panel2.TabIndex = 1;
 			// 
-			// textBox1
+			// txtTicketsPlayer
 			// 
-			this.textBox1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(213, 10);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(141, 27);
-			this.textBox1.TabIndex = 5;
+			this.txtTicketsPlayer.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTicketsPlayer.Location = new System.Drawing.Point(213, 10);
+			this.txtTicketsPlayer.Name = "txtTicketsPlayer";
+			this.txtTicketsPlayer.Size = new System.Drawing.Size(141, 27);
+			this.txtTicketsPlayer.TabIndex = 5;
 			// 
 			// label2
 			// 
@@ -279,10 +287,10 @@ namespace DraconisCommands
 			// lblTicketsServerDesc
 			// 
 			this.lblTicketsServerDesc.Anchor = System.Windows.Forms.AnchorStyles.Right;
-			this.lblTicketsServerDesc.Location = new System.Drawing.Point(503, 12);
+			this.lblTicketsServerDesc.Location = new System.Drawing.Point(360, 12);
 			this.lblTicketsServerDesc.Name = "lblTicketsServerDesc";
 			this.lblTicketsServerDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lblTicketsServerDesc.Size = new System.Drawing.Size(249, 23);
+			this.lblTicketsServerDesc.Size = new System.Drawing.Size(392, 23);
 			this.lblTicketsServerDesc.TabIndex = 2;
 			this.lblTicketsServerDesc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
@@ -307,14 +315,25 @@ namespace DraconisCommands
 			this.tabControl1.Location = new System.Drawing.Point(2, 26);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(775, 307);
+			this.tabControl1.Size = new System.Drawing.Size(775, 254);
 			this.tabControl1.TabIndex = 0;
+			// 
+			// btnTicketsListAuthoredGrids
+			// 
+			this.btnTicketsListAuthoredGrids.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTicketsListAuthoredGrids.Location = new System.Drawing.Point(526, 12);
+			this.btnTicketsListAuthoredGrids.Name = "btnTicketsListAuthoredGrids";
+			this.btnTicketsListAuthoredGrids.Size = new System.Drawing.Size(166, 36);
+			this.btnTicketsListAuthoredGrids.TabIndex = 7;
+			this.btnTicketsListAuthoredGrids.Text = "List Created Grids";
+			this.btnTicketsListAuthoredGrids.UseVisualStyleBackColor = true;
+			this.btnTicketsListAuthoredGrids.Click += new System.EventHandler(this.btnTicketsListAuthoredGrids_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(776, 333);
+			this.ClientSize = new System.Drawing.Size(776, 280);
 			this.Controls.Add(this.lblTopAlert);
 			this.Controls.Add(this.tabControl1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -344,20 +363,21 @@ namespace DraconisCommands
 		private System.Windows.Forms.TextBox txtSteam64orUsername;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnTicketsClearAdminMode;
+		private System.Windows.Forms.Button btnTicketsAdminModeAfter;
+		private System.Windows.Forms.Button btnTicketsGiveScripterAccess;
+		private System.Windows.Forms.Button btnTicketsListOwnedGrids;
+		private System.Windows.Forms.Button btnTicketsListHangarContents;
+		private System.Windows.Forms.Button btnTicketsListGridBackups;
 		private System.Windows.Forms.Button btnTicketsAdminMode;
 		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtTicketsPlayer;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblTicketsServerDesc;
 		private System.Windows.Forms.ComboBox comboServers;
 		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.Button btnTicketsListAuthoredGrids;
 	}
 }
 
