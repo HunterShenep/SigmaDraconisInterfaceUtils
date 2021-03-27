@@ -12,3 +12,4 @@ C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\Draconi
 C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\bin\Debug\DraconisCommands.application
 C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.exe.manifest
 C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.application
+C:\Users\Hunter\source\repos\DraconisCommands\DraconisCommands\obj\Debug\DraconisCommands.GridBackupData.resources

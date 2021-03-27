@@ -12,6 +12,5 @@ namespace DraconisCommands.Models
 
 		public long GridID { get; set; }
 		public DateTime Date { get; set; }
-		public string test { get; set; }
 	}
 }

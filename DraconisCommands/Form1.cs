@@ -17,8 +17,8 @@ namespace DraconisCommands
 	{
 		public static string Steam64ou;
 		public static List<string> servers = new List<string>();
-		public List<GridBackup> Grids = new List<GridBackup>();
-		public IEnumerable<GridBackup> IEGrids;
+		
+		//public IEnumerable<GridBackup> IEGrids;
 
 
 		public Form1()
@@ -189,8 +189,8 @@ namespace DraconisCommands
 		{
 			if (getSelectedServer().Equals("fk")){
 
-				copyToClipboard("o5 hm list \"" + getPlayer() + "\"");
-				MessageBox.Show("Server: fk is not necessary for this command. Copied o5 instead. (Hangars are synced anyways)", "Uh oh");
+				copyToClipboard("?? hm list \"" + getPlayer() + "\"");
+				MessageBox.Show("Server: fk is not necessary for this command. Copied ?? instead. (Hangars are synced anyways)", "Uh oh");
 			}
 			else
 			{
@@ -210,7 +210,16 @@ namespace DraconisCommands
 
 		private void btnTicketsGiveScripterAccess_Click(object sender, EventArgs e)
 		{
-			copyToClipboard(getSelectedServer() + " admin setrank \"" + getPlayer() + "\" 1");
+			if (getSelectedServer().Equals("fk"))
+			{
+				copyToClipboard("?? admin setrank \"" + getPlayer() + "\" 1");
+				MessageBox.Show("Server: fk is not necessary for this command. Copied ?? instead.", "Uh oh");
+			}
+			else
+			{
+				copyToClipboard(getSelectedServer() + " admin setrank \"" + getPlayer() + "\" 1");
+			}
+				
 		}
 
 
@@ -257,54 +266,79 @@ namespace DraconisCommands
 
 		private void btnGridBackupParse_Click(object sender, EventArgs e)
 		{
-			string pastedText = txtGridBackupPaste.Text;
-			string[] lines = pastedText.Split(new[] { "\r\n", "\r", "\n"}, StringSplitOptions.None);
-			lblBackupStatus.Text = lines.Count().ToString();
 
 
-
-			foreach (string s in lines)
-			{
-				//Retrieve gridname
-				int firstSpace = 0;
-				firstSpace = s.IndexOf(" ", 0);
-				int firstUnderscore = 0;
-				firstUnderscore = s.IndexOf("_");
-				string gridName = s.Substring((firstSpace+1), (firstUnderscore-(firstSpace+1)));
-
-				//Retrieve GridID
-				int dash = s.IndexOf("-", firstUnderscore);
-				string tempTemp = s.Substring(0, firstUnderscore);
-				int lengthBeforeUnderscore = tempTemp.Length;
-				string GridIDstring = s.Substring((firstUnderscore + 1), (dash-(firstUnderscore)-2));
-
-				//Retrieve DateTime
-				string dateTime = s.Substring((dash +2), ((s.Length - dash)-2));
-				DateTime theDate = DateTime.ParseExact(dateTime, "yyyy-MM-dd HH:mm:ss", null);
-
-				GridBackup grid = new GridBackup()
+				if (btnGridBackupParse.Text.Equals("") || String.IsNullOrEmpty(btnGridBackupParse.Text) || btnGridBackupParse.Text == null)
 				{
-					GridName = gridName,
-					GridID = long.Parse(GridIDstring),
-					Date = theDate
-				};
-				Grids.Add(grid);
+
+				}
+				else
+				{
+
+					try
+					{
+					string pastedText = txtGridBackupPaste.Text;
+					string[] lines = pastedText.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+					//lblBackupStatus.Text = lines.Count().ToString();
+
+					List<GridBackup> Grids = new List<GridBackup>();
+
+					foreach (string s in lines)
+					{
+						//Retrieve gridname
+						int firstSpace = 0;
+						firstSpace = s.IndexOf(" ", 0);
+						int firstUnderscore = 0;
+						firstUnderscore = s.IndexOf("_");
+						string gridName = s.Substring((firstSpace + 1), (firstUnderscore - (firstSpace + 1)));
+
+						//Retrieve GridID
+						int dash = s.IndexOf("-", firstUnderscore);
+						string tempTemp = s.Substring(0, firstUnderscore);
+						int lengthBeforeUnderscore = tempTemp.Length;
+						string GridIDstring = s.Substring((firstUnderscore + 1), (dash - (firstUnderscore) - 2));
+
+						//Retrieve DateTime
+						string dateTime = s.Substring((dash + 2), ((s.Length - dash) - 2));
+						DateTime theDate = DateTime.ParseExact(dateTime, "yyyy-MM-dd HH:mm:ss", null);
+
+						//Assign an object to these values
+						GridBackup grid = new GridBackup()
+						{
+							GridName = gridName,
+							GridID = long.Parse(GridIDstring),
+							Date = theDate
+						};
+						Grids.Add(grid);
+					}
+
+					GridBackupData newForm = new GridBackupData(Grids, getPlayer(), getSelectedServer());
+					newForm.Show();
+
+				}
+					catch (NullReferenceException ex)
+					{
+
+					}
+					catch(Exception ex)
+					{
+
+					}
+				
+
 			}
 
-			IEGrids = Grids
-				.OrderBy(g => g.Date);
-
-			foreach(GridBackup g in IEGrids)
-			{
-				txtTest.Text += g.GridName + " " + g.GridID + " >>>>> " + g.Date.ToString();
-				txtTest.AppendText(Environment.NewLine);
-			}
 
 		}
 
 		private void txtGridBackupPaste_TextChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void btnClearGridBackupParse_Click(object sender, EventArgs e)
+		{
+			txtGridBackupPaste.Text = "";
 		}
 	}
 }

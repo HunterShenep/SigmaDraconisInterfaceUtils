@@ -80,6 +80,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GridBackupData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridBackupData.Designer.cs">
+      <DependentUpon>GridBackupData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\GridBackup.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\Servers.cs" />
@@ -87,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridBackupData.resx">
+      <DependentUpon>GridBackupData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

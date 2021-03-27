@@ -76,12 +76,10 @@ namespace DraconisCommands
 			this.btnXela64 = new System.Windows.Forms.Button();
 			this.btnXelaScripter = new System.Windows.Forms.Button();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.panel8 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.btnGridBackupParse = new System.Windows.Forms.Button();
 			this.txtGridBackupPaste = new System.Windows.Forms.TextBox();
-			this.lblBackupStatus = new System.Windows.Forms.Label();
-			this.txtTest = new System.Windows.Forms.TextBox();
+			this.btnClearGridBackupParse = new System.Windows.Forms.Button();
 			this.Settings.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.Tickets.SuspendLayout();
@@ -92,7 +90,6 @@ namespace DraconisCommands
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.tabPage1.SuspendLayout();
-			this.panel8.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -108,7 +105,7 @@ namespace DraconisCommands
 			// 
 			this.lblTopAlert.Anchor = System.Windows.Forms.AnchorStyles.Right;
 			this.lblTopAlert.BackColor = System.Drawing.SystemColors.ButtonShadow;
-			this.lblTopAlert.Location = new System.Drawing.Point(595, 141);
+			this.lblTopAlert.Location = new System.Drawing.Point(2, 2);
 			this.lblTopAlert.Name = "lblTopAlert";
 			this.lblTopAlert.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.lblTopAlert.Size = new System.Drawing.Size(730, 23);
@@ -345,10 +342,13 @@ namespace DraconisCommands
 			// 
 			// myTabControl
 			// 
+			this.myTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.myTabControl.Controls.Add(this.Tickets);
 			this.myTabControl.Controls.Add(this.Xela);
-			this.myTabControl.Controls.Add(this.Settings);
 			this.myTabControl.Controls.Add(this.tabPage1);
+			this.myTabControl.Controls.Add(this.Settings);
 			this.myTabControl.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.myTabControl.Location = new System.Drawing.Point(2, 26);
 			this.myTabControl.Name = "myTabControl";
@@ -592,29 +592,20 @@ namespace DraconisCommands
 			this.tabPage1.Text = "GridBackup";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// panel8
-			// 
-			this.panel8.BackColor = System.Drawing.Color.Gainsboro;
-			this.panel8.Controls.Add(this.txtTest);
-			this.panel8.Controls.Add(this.lblBackupStatus);
-			this.panel8.Location = new System.Drawing.Point(12, 286);
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(1116, 219);
-			this.panel8.TabIndex = 2;
-			// 
 			// panel7
 			// 
 			this.panel7.BackColor = System.Drawing.Color.Gainsboro;
+			this.panel7.Controls.Add(this.btnClearGridBackupParse);
 			this.panel7.Controls.Add(this.btnGridBackupParse);
 			this.panel7.Controls.Add(this.txtGridBackupPaste);
 			this.panel7.Location = new System.Drawing.Point(6, 3);
 			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(354, 219);
+			this.panel7.Size = new System.Drawing.Size(704, 219);
 			this.panel7.TabIndex = 1;
 			// 
 			// btnGridBackupParse
 			// 
-			this.btnGridBackupParse.Location = new System.Drawing.Point(250, 171);
+			this.btnGridBackupParse.Location = new System.Drawing.Point(600, 171);
 			this.btnGridBackupParse.Name = "btnGridBackupParse";
 			this.btnGridBackupParse.Size = new System.Drawing.Size(101, 40);
 			this.btnGridBackupParse.TabIndex = 1;
@@ -627,33 +618,26 @@ namespace DraconisCommands
 			this.txtGridBackupPaste.Location = new System.Drawing.Point(3, 3);
 			this.txtGridBackupPaste.Multiline = true;
 			this.txtGridBackupPaste.Name = "txtGridBackupPaste";
-			this.txtGridBackupPaste.Size = new System.Drawing.Size(348, 162);
+			this.txtGridBackupPaste.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.txtGridBackupPaste.Size = new System.Drawing.Size(698, 162);
 			this.txtGridBackupPaste.TabIndex = 0;
 			this.txtGridBackupPaste.TextChanged += new System.EventHandler(this.txtGridBackupPaste_TextChanged);
 			// 
-			// lblBackupStatus
+			// btnClearGridBackupParse
 			// 
-			this.lblBackupStatus.AutoSize = true;
-			this.lblBackupStatus.Location = new System.Drawing.Point(13, 6);
-			this.lblBackupStatus.Name = "lblBackupStatus";
-			this.lblBackupStatus.Size = new System.Drawing.Size(41, 13);
-			this.lblBackupStatus.TabIndex = 0;
-			this.lblBackupStatus.Text = "label12";
-			// 
-			// txtTest
-			// 
-			this.txtTest.Location = new System.Drawing.Point(6, 39);
-			this.txtTest.Multiline = true;
-			this.txtTest.Name = "txtTest";
-			this.txtTest.Size = new System.Drawing.Size(1107, 162);
-			this.txtTest.TabIndex = 2;
+			this.btnClearGridBackupParse.Location = new System.Drawing.Point(3, 171);
+			this.btnClearGridBackupParse.Name = "btnClearGridBackupParse";
+			this.btnClearGridBackupParse.Size = new System.Drawing.Size(101, 40);
+			this.btnClearGridBackupParse.TabIndex = 2;
+			this.btnClearGridBackupParse.Text = "Clear";
+			this.btnClearGridBackupParse.UseVisualStyleBackColor = true;
+			this.btnClearGridBackupParse.Click += new System.EventHandler(this.btnClearGridBackupParse_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1321, 562);
-			this.Controls.Add(this.panel8);
+			this.ClientSize = new System.Drawing.Size(728, 284);
 			this.Controls.Add(this.lblTopAlert);
 			this.Controls.Add(this.myTabControl);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -674,8 +658,6 @@ namespace DraconisCommands
 			this.panel5.ResumeLayout(false);
 			this.panel5.PerformLayout();
 			this.tabPage1.ResumeLayout(false);
-			this.panel8.ResumeLayout(false);
-			this.panel8.PerformLayout();
 			this.panel7.ResumeLayout(false);
 			this.panel7.PerformLayout();
 			this.ResumeLayout(false);
@@ -729,12 +711,10 @@ namespace DraconisCommands
 		private System.Windows.Forms.Button btnXela64;
 		private System.Windows.Forms.Button btnXelaScripter;
 		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.Panel panel8;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Button btnGridBackupParse;
 		private System.Windows.Forms.TextBox txtGridBackupPaste;
-		private System.Windows.Forms.Label lblBackupStatus;
-		private System.Windows.Forms.TextBox txtTest;
+		private System.Windows.Forms.Button btnClearGridBackupParse;
 	}
 }
 
