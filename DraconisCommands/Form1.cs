@@ -194,7 +194,7 @@ namespace DraconisCommands
 			}
 			else
 			{
-				copyToClipboard(getSelectedServer() + " hmlist \"" + getPlayer() + "\"");
+				copyToClipboard(getSelectedServer() + " hm list \"" + getPlayer() + "\"");
 			}
 		}
 

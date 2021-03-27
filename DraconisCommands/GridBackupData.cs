@@ -52,7 +52,7 @@ namespace DraconisCommands
 			{
 				int row = e.RowIndex;
 				string text = dvgGridBackups.Rows[row].Cells[1].Value.ToString();
-				copyToClipboard(server + " gridbackuprestore \"" + player + "\" " + text + " 1");
+				copyToClipboard(server + " gridbackup restore \"" + player + "\" " + text + " 1");
 				//Do something with your button.
 			}
 		}
