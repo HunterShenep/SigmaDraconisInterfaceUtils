@@ -36,11 +36,11 @@ namespace DraconisCommands.Models
 			theServers.Add(new Servers("i2", "Thanian | sends12"));
 			theServers.Add(new Servers("i4", "Outer Belts | sends14"));
 			theServers.Add(new Servers("fk", "Main Cluster Globa"));
-			theServers.Add(new Servers("1", "DI Lobby | TDRAC01"));
-			theServers.Add(new Servers("2", "Space / Part of Purgatory | TDRAC02"));
-			theServers.Add(new Servers("3", "East Purgatory | TDRAC03"));
-			theServers.Add(new Servers("4", "West Purgatory | TDRAC04"));
-			theServers.Add(new Servers("5", "Other Planets | TDRAC05"));
+			theServers.Add(new Servers("D1", "DI Lobby | TDRAC01"));
+			theServers.Add(new Servers("D2", "Space / Part of Purgatory | TDRAC02"));
+			theServers.Add(new Servers("D3", "East Purgatory | TDRAC03"));
+			theServers.Add(new Servers("D4", "West Purgatory | TDRAC04"));
+			theServers.Add(new Servers("D5", "Other Planets | TDRAC05"));
 
 			return theServers;
 		}
